@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // fungsi untuk mengecek bilangan prima
+            function bilanganPrima(number) {
+            if (number < 2) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                return false;
+                }
+            }
+            return true;
+            }
+            // fungsi untuk menampilkan rentang angka
+            function rentangAngka(start, end) {
+            if (start >= end) {
+                console.log("Input rentang salah!");
+                return;
+            }
+            for (let i = start; i <= end; i++) {
+                if (bilanganPrima(i)) {
+                console.log(i + " Bilangan PRIMA");
+                } else {
+                console.log(i + " Bukan Bilangan PRIMA");
+                }
+            }
+            }
+            // pemanggilan fungsi rentangAngka
+            rentangAngka(0, 23);
+        </script>  
+    </body>
+</html>
